@@ -7,5 +7,5 @@ And uses the libraries available at:
     https://github.com/bogde/HX711
     https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/Home
     
-The other codes were developed by:
+The other codes, especially SerialData.py, were developed by:
   Matheus Costa, https://github.com/matcosta23
