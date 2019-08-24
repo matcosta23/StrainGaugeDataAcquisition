@@ -5,12 +5,12 @@ import matplotlib.pyplot as plt
 
 ser = serial.Serial('COM3', baudrate = 9600, timeout = 1)       #Leitura da porta serial (deve ser adaptada ao USB utilizado)
 
-LimitTime = float(input("Digite a duração em segundos da execução do ensaio.\n"))
+LimitTime = float(input("Digite a duração em segundos da execução do ensaio.\n---> "))
 
 tara = 0
 tm = 0
 
-UserFile = input("Escreva o nome do arquivo destinado a salvar os dados.\n")
+UserFile = input("Escreva o nome do arquivo destinado a salvar os dados.\n---> ")
 
 dataFileTXT = open(UserFile + '.txt','w')           #Arquivo.txt
 dataFileCSV = open(UserFile + '.csv','w')           #Arquivo.csv
@@ -24,13 +24,13 @@ def GetValue():
     StrainGaugeData = ser.readline().decode().split('\r\n')  #A quebra de linha também é lida na porta serial
     return StrainGaugeData[0]        #Retorna apenas a informação numérica: dado ou tempo
 
-print("Respostas positivas devem ser respondidas com 'y' e negativas com 'n'.\n\n")
+print("\nRespostas positivas devem ser respondidas com 'y' e negativas com 'n'.\n")
 
-userRequest = input("Gostaria de zerar o medidor antes de iniciar?.\n")
+userRequest = input("Gostaria de zerar o medidor antes de iniciar?.\n---> ")
 if userRequest == 'y':
     tara = 1                        #Marca o pedido do usuário
     
-userRequest = input("Para iniciar a captura dos dados, pressione a tecla 'y'.\n")
+userRequest = input("Para iniciar a captura dos dados, pressione a tecla 'y'.\n---> ")
 if userRequest == 'y':
     if tara == 1:                   #Se o usuário solicitou a tara, o comando 't' é escrito no Monitor Serial
         ser.write(b't')
