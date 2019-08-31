@@ -43,11 +43,11 @@ if userRequest == 'y':
         
         data = GetValue()           #Primeiro lê a deformação
         dataFileTXT.write(data + '\t\t')
-        dataFileCSV(data + ',')     #E escreve de maneira adequada para cada um dos arquivos
+        dataFileCSV.write(data + ',')     #E escreve de maneira adequada para cada um dos arquivos
         
         tm = float(GetValue())/1000     #Como o tempo lido é em milisegundos, deve ser passado para segundos
         dataFileTXT.write(str(tm) + '\n')
-        dataFileTXT.write(str(tm) + '\n')
+        dataFileCSV.write(str(tm) + '\n')
         
     dataFileTXT.close()
     dataFileCSV.close()             #Fechar os arquivos
