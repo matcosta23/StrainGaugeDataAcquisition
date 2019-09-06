@@ -1,5 +1,5 @@
-Tempo	Ext	Tensão
-s 	µm/m	V
+Tempo	Ext	TensÃ£o
+s 	Âµm/m	V
 0.00E+00	-6.74E+00	-1.81E-02
 1.00E-01	-6.51E+00	-1.74E-02
 2.00E-01	-6.39E+00	-1.71E-02
